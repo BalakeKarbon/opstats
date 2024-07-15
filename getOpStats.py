@@ -25,5 +25,5 @@ for op in ops:
     opstats.append([op,counts[index],percents[index]])
 
 sortedopstats=sorted(opstats,key=lambda x: x[2])
-for line in sortedopstats:
-    print(line)
+total=[opcount,sortedopstats]
+print(total)
