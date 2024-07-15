@@ -15,6 +15,7 @@ curcounts=[]
 for line in data:
     #Using split() wont work for some programs and paths that have spaces.
     elf=line.split()[0][:-1]
+    print(str("Processing \""+elf+"\"..."))
     stats=json.loads(subprocess.check_output(['./opstats.sh', elf]).decode('utf-8').replace("'","\""))
     opcount=opcount+stats[0]
     for op in stats[1]:
